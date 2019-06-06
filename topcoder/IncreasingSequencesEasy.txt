@@ -1,0 +1,69 @@
+PROBLEM STATEMENT
+
+You are given two vector <int>s L and R, each of length n.
+
+
+Find the number of strictly increasing sequences of integers A[0] < A[1] < ... < A[n-1] such that L[i] ≤ A[i] ≤ R[i] for every i. Return this number modulo 998244353.
+
+
+DEFINITION
+Class:IncreasingSequencesEasy
+Method:count
+Parameters:vector <int>, vector <int>
+Returns:int
+Method signature:int count(vector <int> L, vector <int> R)
+
+
+NOTES
+-The number 998244353 is a prime number.
+
+
+CONSTRAINTS
+-n will be between 1 and 300, inclusive.
+-L will contain exactly n elements.
+-R will contain exactly n elements.
+-L[i] will be between 1 and 10^4, inclusive.
+-R[i] will be between L[i] and 10^4, inclusive.
+
+
+EXAMPLES
+
+0)
+{1, 3, 1, 4}
+{6, 5, 4, 6}
+
+Returns: 4
+
+There are 4 strictly increasing sequences satisfying the conditions: {1, 3, 4, 5}, {1, 3, 4, 6}, {2, 3, 4, 5} and {2, 3, 4, 6}.
+
+1)
+{10, 20}
+{20, 30}
+
+Returns: 120
+
+
+
+2)
+{20, 10}
+{30, 20}
+
+Returns: 0
+
+
+
+3)
+{4, 46, 46, 35, 20, 77, 20}
+{41, 65, 84, 90, 49, 86, 88}
+
+Returns: 2470
+
+
+
+4)
+{1, 1, 1}
+{10000, 10000, 10000}
+
+Returns: 908107402
+
+Don't forget about the modulo.
