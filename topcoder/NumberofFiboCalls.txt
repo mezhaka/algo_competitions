@@ -1,0 +1,72 @@
+PROBLEM STATEMENT
+Look at the following pseudo-code, which computes the n-th Fibonacci number:
+
+int fibonacci(int n)
+	begin
+	if n equals 0
+		begin
+		print(0)
+		return 0
+		end
+	if n equals 1
+		begin
+		print(1)
+		return 1
+		end
+	return fibonacci(n - 1) + fibonacci(n - 2)
+	end
+
+
+For example, if one calls fibonacci(3), then the following will happen:
+
+fibonacci(3) calls fibonacci(2) and fibonacci(1) (the first call).
+fibonacci(2) calls fibonacci(1) (the second call) and fibonacci(0).
+The second call of fibonacci(1) prints 1 and returns 1.
+fibonacci(0) prints 0 and returns 0.
+fibonacci(2) gets the results of fibonacci(1) and fibonacci(0) and returns 1.
+The first call of fibonacci(1) prints 1 and returns 1.
+fibonacci(3) gets the results of fibonacci(2) and fibonacci(1) and returns 2.
+
+In total, '1' will be printed twice and '0' will be printed once.
+
+
+We want to know how many times '0' and '1' will be printed for a given n. You are to return a vector <int> which contains exactly two elements. The first and second elements of the return value must be equal to the number of times '0' and '1', respectively, will be printed during a fibonacci(n) call.
+
+
+DEFINITION
+Class:NumberofFiboCalls
+Method:fiboCallsMade
+Parameters:int
+Returns:vector <int>
+Method signature:vector <int> fiboCallsMade(int n)
+
+
+CONSTRAINTS
+-n will be between 0 and 40, inclusive.
+
+
+EXAMPLES
+
+0)
+0
+
+Returns: {1, 0 }
+
+If I call the Fibonacci function with n = 0, it just calls the 1st base case. Hence, the result is {1,0}.
+
+1)
+3
+
+Returns: {1, 2 }
+
+The test case given in the problem statement.
+
+2)
+6
+
+Returns: {5, 8 }
+
+3)
+22
+
+Returns: {10946, 17711 }
