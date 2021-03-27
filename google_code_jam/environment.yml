@@ -1,0 +1,16 @@
+# -----------------------------------------------------------
+# This conda environment file describes all dependencies the
+# underlying code has during build, test, development and
+# runtime.
+# -----------------------------------------------------------
+name: codejam
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  # ---------------------------
+  # Actual runtime dependencies
+  # ---------------------------
+  - python = 3.7.3
+  - numpy = 1.19.3
+  - scipy = 1.5.3
