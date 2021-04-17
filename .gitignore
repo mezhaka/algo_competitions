@@ -1,3 +1,7 @@
-*.un~
 *.swp
 *.swo
+a.out
+*.un~
+htmlcov
+*.bak
+.coverage
